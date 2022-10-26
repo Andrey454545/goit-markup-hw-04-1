@@ -12,7 +12,6 @@
     --accent-color: #2196F3;
     --white-color: #FFFFFF;
     --primary-white-color: #F5F5F5;
-
 }
 
 body{
@@ -68,9 +67,16 @@ ul{
     text-decoration: none;
 }
 
+.logo-header:focus {
+    color: red;
+    background-color: inherit;
+    outline: 0;
+}
+
 .studio{
     color: #000000;
 }
+
 
 .frame-line {
     margin-left: 93px;
@@ -92,9 +98,18 @@ ul{
     text-decoration: none;
 } 
 
-.list-html:hover {  
+.list-html:hover :focus {  
     color: var(--title-text-color);
+    background-color: inherit;
+    outline: 0;
 } 
+
+.list-html:focus {  
+    color: red;
+    background-color: inherit;
+    outline: 0;
+} 
+
 
 .list-html-label.current {
     font-weight: 500;
@@ -105,11 +120,17 @@ ul{
     text-decoration: none;
 }
 
+.list-html-label:focus {
+    color: red;
+    background-color: inherit;
+    outline: 0;
+}
+
 .list-html-label:hover {  
     color: var(--title-text-color);
 } 
 
-.list-html::after {
+/*.list-html::after {
     content: '';
     display: inline-block;
     width: 45px;
@@ -118,7 +139,7 @@ ul{
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: right;
-}
+}*/
 
 .block{
     font-weight: 500;
@@ -133,9 +154,14 @@ ul{
     color: orange;
 }
 
+.block:focus {
+    color: red;
+    background-color: inherit;
+    outline: 0;
+}
+
 .header-contact {
     margin-left: auto;
-    
 }
 
 .form {
@@ -154,6 +180,12 @@ ul{
     margin-right: 50px;
 }
 
+.email:focus {
+    color: red;
+    background-color: inherit;
+    outline: 0;
+}
+
 .email::before {
     content: '';
     display: inline-block;
@@ -163,7 +195,8 @@ ul{
     margin-right: 10px;
 }
 
-.email::after {
+
+/*.email::after {
     content: '';
     display: block;
     width: 161px;
@@ -173,7 +206,7 @@ ul{
     background-position: left;
     background-position: 55px;
     margin-right: 30px;
-}
+}*/
 
 .email-label {
     font-weight: 500;
@@ -183,6 +216,12 @@ ul{
     color: var(--primary-text-color);
     text-decoration: none;
     margin-right: 50px;
+}
+
+.email-label:focus {
+    color: red;
+    background-color: inherit;
+    outline: 0;
 }
 
 .email-label::before {
@@ -203,6 +242,12 @@ ul{
     text-decoration: none;      /* прибрати підкреслення */
 }
 
+.number:focus {
+    color: red;
+    background-color: inherit;
+    outline: 0;
+}
+
 .number::before {
     content: '';
     display: inline-block;
@@ -217,6 +262,9 @@ ul{
 
 /*margin: 0 auto;    розміщення по середині*/
 
+
+
+/*   main   */
 
 .main-head {
     width: 1600px;
@@ -243,9 +291,11 @@ ul{
     margin-bottom: 30px;
 }
 
-.section-main:hover { /*селектор состояния (при наведенні) до всіх */
+                    /*селектор состояния (при наведенні) до всіх */
+/*.section-main:hover { 
     color: orange;
-}
+}*/
+
 
 /*селектор focus (при наведенні) до інтерактивних (кнопки, ссилки, елементи форми) */
 /*селектор active (при натиснені) до інтерактивних (кнопки, ссилки, елементи форми) */
@@ -276,13 +326,14 @@ ul{
     margin: 0 auto;
 }
 
-/*descrip*/
+
+
+/*  descrip  */
                 /*прихований заголовок*/
 .descrip-section {
     padding-top: 94px;
     padding-bottom: 94px;
 }
-
 
 .main-container {
     width: 1200px;
@@ -331,18 +382,26 @@ ul{
 
 .icon-mobile::before {
     background-image: url('../img/antenna\ 1.png');
+    border-radius: 4px;
+    margin-bottom: 30px;
 }
 
 .icon-clock::before {
     background-image: url('../img/clock\ 1.png');
+    border-radius: 4px;
+    margin-bottom: 30px;
 }
 
 .icon-diagram::before {
     background-image: url('../img/diagram\ 1.png');
+    border-radius: 4px;
+    margin-bottom: 30px;
 }
 
 .icon-astronaut::before {
     background-image: url('../img/astronaut\ 1.png');
+    border-radius: 4px;
+    margin-bottom: 30px;
 }
 
 .title{
@@ -353,7 +412,6 @@ ul{
     text-transform: uppercase;
     color: var(--title-text-color);
     margin-bottom: 10px;
-   
 }
 
 .text{
@@ -386,7 +444,9 @@ ul{
     gap: 30px;
 }
 
-/*team*/
+
+
+/*  -  team  -   */
 
 .team-section {
     padding-top: 94px;
@@ -396,8 +456,6 @@ ul{
 .hue {  
     background-color: #F5F4FA;
 }
-
- /*outline: 2px solid red; */ /* контур контейнера*/
 
 .team-basic {
     font-weight: 700;
@@ -456,7 +514,6 @@ ul{
     margin-bottom: 16px;
 }
 
-
 .barbers-cos-list {
     display: flex;
     justify-content: center;  /* по центру */
@@ -471,48 +528,32 @@ ul{
 .barbers-cos-link {
     width: 100%;
     height: 100%;
-    
     border-radius: 50%;
+    background-color: #FFFFFF;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.barbers-blue-icon {
-    fill: #FFFFFF;
+.link {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.barbers-cos-link:hover {
+    background-color: var(--accent-color);  
 }
 
 .barbers-cos-icon {
     fill: #AFB1B8;
 }
 
-.barbers-cos-link:hover {
-    background-color: teal;
-    color: red;
+.link:hover .barbers-cos-icon {
+    fill: #FFFFFF;
 }
 
-
-/*
-.barbers-cos-link:hover {
-    background-color: teal;
-}
-
-.barbers-cos-link:hover .barbers-cos-icon {
-    fill: red;
-}*/
-
-.blue-link {
-    /*display: inline-block;*/
-    height: 44px;
-    width: 44px;
-    background-color: var(--accent-color);
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-}
-
-.fing::after {
+/*.fing::after {
     content: '';
     display: block;
     width: 44px;
@@ -521,27 +562,13 @@ ul{
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: 20px;
-}
-
-.link {
-    /*display: inline-block;*/
-    height: 44px;
-    width: 44px;
-    background-color: #FFFFFF;
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-}
-
-.link:hover {
-    background-color: teal;
-}
+}*/
 
 
 
 
-/* client-section */
+
+/*    client-section    */
 
 
 .client-section {
@@ -583,6 +610,10 @@ ul{
     border-radius: 4px;
 }
 
+.client-cos-link:hover {
+    outline: 1px solid var(--accent-color);
+}
+
 .link-cos {
     background-size: 20px;
     background-repeat: no-repeat;
@@ -590,38 +621,17 @@ ul{
     outline: 1px solid #AFB1B8;
 }
 
-.link-cos:hover {
-    background-color: yellow;
-}
-
 .client-icon {
     fill: #AFB1B8;
 }
 
 .link-cos:hover .client-icon {
-    fill: red;
+    fill: var(--accent-color);
 }
 
-.link-cos-blue {
-    background-size: 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    outline: 1px solid #AFB1B8;
-}
 
-.link-cos-blue:hover {
-    background-color: yellow;
-}
 
-.client-icon-blue {
-    fill: #2196F3;
-}
-
-.link-cos-blue:hover .client-icon-blue {
-    fill: blue;
-}
-
-.four-fing::after {
+/*.four-fing::after {
     content: '';
     display: block;
     width: 170px;
@@ -630,20 +640,32 @@ ul{
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: 107px;
-}
+}*/
 
 
-/*footer*/
+
+
+/*   - footer -   */
 
 .footer-section {
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
+.address-container {
+    padding-left: 215px;
+}
+
+.links-container {
+    padding-left: 70px;
+}
+
 .date {
+    width: 1600px;
     height: 252px;
     background: #2F303A;
     margin: 0 auto;
+    display: flex;
 }
 
 .logo-footer{
@@ -708,16 +730,23 @@ ul{
     width: 206px;
     padding-left: 15px;
     padding-right: 15px;
-    margin: 0 auto; 
-    outline: 1px solid red;        
+    margin: 0 auto;        
 }
 
 .header-links {
     width: 80px;
-    /*padding-top: 30px;
-    padding-bottom: 30px;*/
-    margin: 0 auto;
+    padding-top: 12px;
     margin-bottom: 20px;
+}
+
+.come {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .links-list {
@@ -738,10 +767,7 @@ ul{
     display: flex;
     align-items: center;
     justify-content: center;
-}
-
-.links-blue-icon {
-    fill: #FFFFFF;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .links-cos-icon {
@@ -749,28 +775,14 @@ ul{
 }
 
 .links-cos-link:hover {
-    background-color: teal;
-    color: red;
-}
-
-.row {
-    /*display: inline-block;*/
-    height: 44px;
-    width: 44px;
-    background-color: #2f303a42;
-    background-size: 20px 20px;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 50%;
-    outline: 1px solid yellow;
-}
-
-.row:hover {
-    background-color: teal;
+    background-color: var(--accent-color);
+    outline: 0;
 }
 
 
-/* section-portfolio */
+
+
+/*   section-portfolio   */
 
 .section-portfolio {
     padding-top: 94px;
@@ -805,10 +817,18 @@ ul{
     padding: 6px 25px;
     border: none;
     border-radius: 4px;
+    outline: 0;
 } 
 
+.button-head:hover {
+    background-color: #FFFFFF;
+    color: blue;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
 
-.five-fing::after {
+/*.five-fing::after {
     content: '';
     display: block;
     width: 73px;
@@ -817,7 +837,7 @@ ul{
     background-size: 16px 16px;
     background-repeat: no-repeat;
     background-position: 25px;
-}
+}*/
 
 .button-portfolio {
     font-family: 'Roboto';
@@ -833,15 +853,21 @@ ul{
     border: none;           /*прибирає контур кнопки*/
     white-space: nowrap;     /*не розбивати на 2 строки*/
     border-radius: 4px;
+    outline: 0;
 }
 
 .button-portfolio:hover, :focus {  
     color: var(--white-color);
     background-color: var(--accent-color);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 } 
 
+  
 
-/* foto-wrap */
+
+/*    foto-wrap    */
    
 .foto-wrap {
     display: flex;     /*розміщення в ряд*/
@@ -855,15 +881,21 @@ ul{
     border: 1px solid #ECECEC;
 }
 
-
-.foto-item-shadow {
+/*.foto-item-shadow {
     width: 370px;
     border: 1px solid #ECECEC;
     display: block;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+}*/
+
+.foto-item:hover {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
+
 
 /*.foto-item-shadow:hover,
 .foto-item-shadow:focus {
