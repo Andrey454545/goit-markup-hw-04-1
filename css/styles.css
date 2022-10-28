@@ -68,7 +68,7 @@ ul{
 }
 
 .logo-header:focus {
-    color: red;
+    color: var(--accent-color);
     background-color: inherit;
     outline: 0;
 }
@@ -98,15 +98,13 @@ ul{
     text-decoration: none;
 } 
 
-.list-html:hover :focus {  
-    color: var(--title-text-color);
-    background-color: inherit;
-    outline: 0;
+.list-html:hover {  
+    color: var(--accent-color);
 } 
 
 .list-html:focus {  
-    color: red;
-    background-color: inherit;
+    color: var(--accent-color);
+    background-color: var(--white-color);
     outline: 0;
 } 
 
@@ -121,7 +119,7 @@ ul{
 }
 
 .list-html-label:focus {
-    color: red;
+    color: var(--accent-color);
     background-color: inherit;
     outline: 0;
 }
@@ -150,15 +148,19 @@ ul{
     text-decoration: none;
 }
 
+
 .block:hover {
-    color: orange;
+    color: var(--accent-color);
 }
 
 .block:focus {
-    color: red;
-    background-color: inherit;
+    color: var(--accent-color);
+    background-color: var(--white-color);;
     outline: 0;
 }
+
+
+
 
 .header-contact {
     margin-left: auto;
@@ -175,14 +177,15 @@ ul{
     font-size: 14px;
     line-height: 1.14;
     letter-spacing: 0.02em;
-    /*color: var(--accent-color);*/
+    color: var(--accent-color);
     text-decoration: none;
     margin-right: 50px;
 }
 
+.email:hover,
 .email:focus {
-    color: red;
-    background-color: inherit;
+    color: var(--accent-color);
+    background-color: white;
     outline: 0;
 }
 
@@ -218,9 +221,10 @@ ul{
     margin-right: 50px;
 }
 
+.email-label:hover,
 .email-label:focus {
-    color: red;
-    background-color: inherit;
+    color: var(--accent-color);
+    background-color: white;
     outline: 0;
 }
 
@@ -242,8 +246,9 @@ ul{
     text-decoration: none;      /* прибрати підкреслення */
 }
 
+.number:hover,
 .number:focus {
-    color: red;
+    color: var(--accent-color);
     background-color: inherit;
     outline: 0;
 }
@@ -257,7 +262,6 @@ ul{
     /*align-items: baseline;*/   /* вирівнювання по лінії букв */
     margin-right: 10px;
 }
-
 
 
 /*margin: 0 auto;    розміщення по середині*/
@@ -541,8 +545,10 @@ ul{
     background-position: center;
 }
 
-.barbers-cos-link:hover {
-    background-color: var(--accent-color);  
+.barbers-cos-link:hover,
+.barbers-cos-link:focus {
+    background-color: var(--accent-color); 
+    outline: 0; 
 }
 
 .barbers-cos-icon {
@@ -551,6 +557,11 @@ ul{
 
 .link:hover .barbers-cos-icon {
     fill: #FFFFFF;
+}
+
+.link:focus .barbers-cos-icon {
+   fill: #FFFFFF;
+   
 }
 
 /*.fing::after {
@@ -610,7 +621,9 @@ ul{
     border-radius: 4px;
 }
 
-.client-cos-link:hover {
+.client-cos-link:hover,
+.client-cos-link:focus {
+    background-color: white;
     outline: 1px solid var(--accent-color);
 }
 
@@ -625,11 +638,10 @@ ul{
     fill: #AFB1B8;
 }
 
-.link-cos:hover .client-icon {
+.link-cos:hover .client-icon,
+.link-cos:focus .client-icon {
     fill: var(--accent-color);
 }
-
-
 
 /*.four-fing::after {
     content: '';
@@ -657,7 +669,7 @@ ul{
 }
 
 .links-container {
-    padding-left: 70px;
+    margin-left: 70px;
 }
 
 .date {
@@ -774,6 +786,7 @@ ul{
     fill: #FFFFFF;
 }
 
+.links-cos-link:focus,
 .links-cos-link:hover {
     background-color: var(--accent-color);
     outline: 0;
@@ -862,6 +875,7 @@ ul{
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;        /* курсор pointer */
 } 
 
   
