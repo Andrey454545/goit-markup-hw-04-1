@@ -199,6 +199,8 @@ ul{
 }
 
 
+
+
 /*.email::after {
     content: '';
     display: block;
@@ -224,7 +226,6 @@ ul{
 .email-label:hover,
 .email-label:focus {
     color: var(--accent-color);
-    background-color: white;
     outline: 0;
 }
 
@@ -336,7 +337,6 @@ ul{
                 /*прихований заголовок*/
 .descrip-section {
     padding-top: 94px;
-    padding-bottom: 94px;
 }
 
 .main-container {
@@ -364,7 +364,6 @@ ul{
 }
 
 .descrip-list {
-    height: 98px;
     display: flex;
     gap: 30px;
 }
@@ -664,6 +663,13 @@ ul{
     padding-bottom: 60px;
 }
 
+.footer-envelope {
+    width: 1600px;
+    display: flex;
+    margin: 0 auto;
+
+}
+
 .address-container {
     padding-left: 215px;
 }
@@ -673,11 +679,8 @@ ul{
 }
 
 .date {
-    width: 1600px;
     height: 252px;
     background: #2F303A;
-    margin: 0 auto;
-    display: flex;
 }
 
 .logo-footer{
@@ -833,12 +836,14 @@ ul{
     outline: 0;
 } 
 
-.button-head:hover {
-    background-color: #FFFFFF;
-    color: blue;
+.button-head:hover,
+.button-head:focus {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
+    cursor: pointer;
 }
 
 /*.five-fing::after {
@@ -869,7 +874,8 @@ ul{
     outline: 0;
 }
 
-.button-portfolio:hover, :focus {  
+.button-portfolio:hover,
+.button-portfolio:focus {  
     color: var(--white-color);
     background-color: var(--accent-color);
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 
